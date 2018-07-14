@@ -166,8 +166,8 @@ secrets:
     user_rgw: ceph-keystone-user-rgw
 
 network:
-  public: 192.168.0.0/16
-  cluster: 192.168.0.0/16
+  public: 10.135.0.0/16
+  cluster: 10.135.0.0/16
   port:
     mon: 6789
     rgw: 8088
@@ -273,11 +273,11 @@ osd_directory:
 # has important data from another application, it will be *LOST*
 # /!\ /!\
 enable_zap_and_potentially_lose_data: false
-#osd_devices:
-#  - name: dev-sdc
-#    device: /dev/sdc
-#    journal: /dev/sdf
-#    zap: "1"
+osd_devices:
+  - name: dev-sda
+    device: /dev/sda
+    # journal: /dev/sdf
+    # zap: "1"
 
 bootstrap:
   enabled: false
